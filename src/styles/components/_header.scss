@@ -1,0 +1,72 @@
+.header{
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 207px;
+    &__image{
+    @extend %image-absolute;
+    }
+    &__container{
+        @extend %container;
+    }
+    &__logo{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 128px;
+    }
+    &__logo-text{
+        padding-left: 11px;
+        font-size: $logo-fs;
+        font-weight: 100;
+        font-family: $base-font;
+        color: $btn-color;
+    }    
+    &__title{
+        text-align: center;
+        color: $white;
+        font-size: $H300;
+        font-weight: 800;
+        font-family: $logo-font;
+        padding-bottom: 52px;
+    }
+    &__title:after{
+        display: block;
+        width: 50px;
+        content: "";
+        position: absolute;
+        padding-bottom: 21px;
+        border-bottom: 1px solid $btn-color;
+        left: 50%;
+    }
+    &__text{
+        font-size: $H50;
+        text-align: center;
+        color: $white;
+        line-height: 24px;
+        font-weight: 300;
+        margin-bottom: 50px;
+    }
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    margin-left: 248px;
+    padding-top: 20px;
+    margin-bottom: 183px;
+    &__item{
+        font-size: $H50;
+        text-transform: uppercase;
+        color: $white;
+        letter-spacing: 0.33;
+        font-weight: 800;
+        cursor: pointer;
+    }
+    &__item:hover{
+        color: $btn-color;
+        transition: all 0.5s ease;
+    }
+}
