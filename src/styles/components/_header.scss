@@ -4,7 +4,7 @@
     padding-bottom: 207px;
     margin-bottom: 70px;
     &__image{
-    @extend %image-absolute;
+        @extend %image-absolute;
     }
     &__container{
         @extend %container;

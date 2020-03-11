@@ -1,0 +1,23 @@
+.section-city{
+    position: relative;
+    padding-top: 202px;
+    &__background{
+        @extend %image-absolute;
+    }
+    &__container{
+        @extend %container;
+    }
+    &__image{
+        position: relative;
+        left: 44.5%;
+        cursor: pointer;
+    }
+    &__title{
+        color: $white;
+        font-size: $H200;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 34px;
+    }
+}
