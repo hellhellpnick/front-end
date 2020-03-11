@@ -11,6 +11,19 @@
         position: relative;
         left: 44.5%;
         cursor: pointer;
+      
+    }
+    &__image svg{
+        width: 100px;
+        height: 100px;
+        fill: $white;
+        transition: all 0.5s ease;
+        border: 10px solid transparent;
+        &:hover{
+            background-color: rgba($color: #fff, $alpha: 0.5);
+            border-radius: 50%;
+            fill: $btn-color;
+        }
     }
     &__title{
         color: $white;

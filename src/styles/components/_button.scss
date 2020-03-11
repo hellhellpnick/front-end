@@ -7,10 +7,11 @@
     font-size: $H100;
     font-weight: 800;
     left: 46%;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
     &:hover{
         color: $white;
-        background-color: $btn-color;
+        background-image: $btn-bg-color;
+        border: transparent;
     }
 
 }
