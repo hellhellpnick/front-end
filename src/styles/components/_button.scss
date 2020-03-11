@@ -7,7 +7,10 @@
     font-size: $H100;
     font-weight: 800;
     left: 46%;
-    &--header{
-        margin-bottom: 207px;
+    transition: all 0.2s ease;
+    &:hover{
+        color: $white;
+        background-color: $btn-color;
     }
+
 }

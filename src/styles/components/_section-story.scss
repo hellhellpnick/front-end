@@ -1,0 +1,30 @@
+.section-story{
+    position: relative;
+    @extend %container;
+    &__title{
+        color: $text; 
+        font-family: $logo-font;
+        font-size: $H200;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-left: 335px;
+        margin-bottom: 28px;
+    }
+    &__text{
+        color: $text;
+        padding-bottom: 22px;
+        font-weight: 400;
+        font-size: $H100;
+        letter-spacing: 0.42px;
+        font-family: $base-font;
+        margin-left: 335px;
+        margin-bottom: 21px;
+        line-height: 22px;
+    }
+    &__image{
+        position: absolute;
+    }
+    &__marg{
+        padding-bottom: 70px;
+    }
+}
