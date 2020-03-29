@@ -11,11 +11,13 @@
     &:hover{
         color: $white;
         background-image: $btn-bg-color;
-        border-color:  transparent;
+        border-color: none;
     }
     &--meet{
         left: 43.5%;
         bottom: 80px;
     }
-
+    &--works{
+        top: 70px;
+    }
 }

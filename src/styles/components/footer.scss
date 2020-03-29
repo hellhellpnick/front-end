@@ -1,0 +1,123 @@
+.footer{
+    position: relative;
+    &__container{
+        @extend %container;
+        @include flex(space-around, stretch, row);
+    }
+    &__logo{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 128px;
+    }
+    &__logo-text{
+    padding-left: 11px;
+    font-size: $logo-fs;
+    font-weight: 100;
+    font-family: $base-font;
+    color: $btn-color;
+    }
+    &__background{
+        &-image{
+            @extend %image-absolute;
+        }
+    }
+    &__wrapper{
+        @include flex(start, stretch, column);
+        padding-top: 70px;
+        margin-bottom: 71px;
+    }
+    &__image{
+        width: 17px;
+        &-wrapper{
+            width: 17px;
+            margin-right: 15px;
+        }
+    }
+    &__content{
+        @include flex(flex-start, stretch, row);
+        &:not(:last-child){
+            margin-bottom: 27px;
+        }
+        &-text{
+            @include text($H50, 400, $white);
+            text-align: justify;
+            line-height: 1.8;
+            &--pos{
+                margin-top: 70px;
+                margin-right: 36px;
+                max-width: 287px;
+            }
+            &--our{
+               max-width: 237px;
+               margin-right: 62px; 
+
+            }
+            
+        }
+        &-title{
+            @include text(15px, 700, $white);
+            text-transform: uppercase;
+            margin-bottom: 42px;
+            margin-top: 10px;
+        }
+    }
+    &__form{
+         @include flex(flex-start, center, row);
+         margin-bottom: 27px;
+         &-input{
+             outline: none;
+             border: 1px solid $grey;
+             background-color: transparent;
+             padding: 15px 15px;
+             margin-right: 10px;
+             color: $white;
+             &::placeholder{
+                 color: $grey;
+             }
+         }
+        &-button{
+            padding: 10px 20px;
+            background-color: $grey;
+        }     
+    }
+    &__aside{
+        @extend %container;
+        @include flex(space-between, stretch, row);
+        padding-bottom: 72px;
+    }
+    &__list{
+        list-style: none;
+        @include flex();
+        @include text($H50, 400, $white);
+        text-transform: uppercase;
+        max-width: 287px;
+        &-item{
+            &:not(:last-child)
+            {
+                margin-right: 30px;
+            }
+        }
+    }
+}
+.list{
+    list-style: none;
+    position: absolute;
+    @include flex(flex-end, stretch, row);
+    top: 220px;
+    right: 495px;
+    &__item{
+        width: 35px;
+        margin-top: -35px;
+        margin-right: 8px;
+        &-image{
+            @include svg(35px, $white);
+            transition: all 0.5s ease;
+            &:hover{
+                fill: $btn-color;
+            }
+        }
+    }
+}

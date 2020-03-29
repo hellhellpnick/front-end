@@ -1,0 +1,55 @@
+.section-works{
+    padding-bottom: 180px;
+    &__our{
+        margin-bottom: 71px;
+        @extend %container;
+        @include flex(space-between, stretch, row);
+        &-title{
+            @include text($H200, 700, $text);
+            font-family: $logo-font;
+            text-transform: uppercase;
+        }
+        &-text{
+            @include text($H50, 400, $text);
+        }
+        &-wrapper{
+            width: 10px;
+        }
+        &-icon{
+            @include svg(10px, $text);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            &:hover{
+                transform: translateX(5px);
+            }
+        }
+    }
+    &__container{
+        width: 100%;
+        &-list{
+            list-style: none;
+            @include flex();
+            flex-wrap: wrap;
+        }
+        &-item{
+            max-height: 400px;
+            max-width: 400px;
+        }
+        &-image{
+            @media screen and (min-width: $screen-desktop-large){
+                max-width: 269px;
+                max-height: 300px;
+            }
+            @media screen and (min-width: $screen-fullhd) {
+                max-width: 380px;
+                height: 400px;
+            }
+            object-fit: cover;
+            object-position:center center ;
+            transition: all 0.2s ease;
+            &:hover{
+                transform: translateY(20px);
+            }
+        }
+    }
+}
