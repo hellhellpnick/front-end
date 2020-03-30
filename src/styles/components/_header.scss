@@ -9,6 +9,7 @@
     &__container{
         @extend %container;
     }
+
     &__logo{
         position: absolute;
         display: flex;
@@ -50,24 +51,25 @@
         margin-bottom: 50px;
     }
 }
-.list{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    justify-content: space-around;
-    margin-left: 248px;
-    padding-top: 20px;
-    margin-bottom: 183px;
-    &__item{
-        font-size: $H50;
-        text-transform: uppercase;
-        color: $white;
-        letter-spacing: 0.33;
-        font-weight: 800;
-        cursor: pointer;
-    }
-    &__item:hover{
-        color: $btn-color;
-        transition: all 0.5s ease;
+.navigation{
+    &__list{
+        list-style: none;
+        @include flex(space-around, stretch, row);
+        margin-left: 248px;
+        padding-top: 20px;
+        margin-bottom: 183px;
+        &-item{
+            font-size: $H50;
+            text-transform: uppercase;
+            color: $white;
+            letter-spacing: 0.33;
+            font-weight: 800;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        &-item:hover{
+            color: $btn-color;
+            transition: all 0.5s ease;
+        }
     }
 }
