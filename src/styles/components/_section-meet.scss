@@ -2,6 +2,7 @@
     padding-top: 71px;
     position: relative;
     margin-bottom: 70px;
+    padding-bottom: 80px;
     &__container{
         @extend %container;
     }
@@ -76,6 +77,6 @@
     &__subtext{
         @include text($H50, 400, $grey-light);
         text-align: center;
-        padding-bottom: 135px;
+        padding-bottom: 80px;
     }
 }
