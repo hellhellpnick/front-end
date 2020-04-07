@@ -43,6 +43,7 @@
             margin-right: 20px;
             border: 1px solid $white;
             transition: all 0.2s ease;
+            cursor: pointer;
             &:hover{
                 border-color: $btn-color;
             }

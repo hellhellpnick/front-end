@@ -33,6 +33,10 @@
             width: 300px;
             @include flex(center, center, column);
             padding-top: 20px;
+            cursor: pointer;
+            &:hover svg{
+                fill: rgb(38, 28, 99); 
+            }
             &:nth-child(2){
                 border-left: 1px solid rgba($text, 0.25);
                 border-bottom: 1px solid rgba($text, 0.25);
@@ -70,7 +74,8 @@
         width: 100px;
         margin-bottom: 20px;
         &-icon{
-            @include svg(50px);
+            @include svg(50px, $btn-color);
+            transition: all 0.2s ease;
         }
     }
 }
