@@ -98,14 +98,9 @@
         }
         &-item{
             @include text($H100, 700, $white);
-            @media screen and (min-width: $screen-fullhd) {
-                font-size: $H300;
-                padding: 0;
-            }
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
             margin-bottom: 10px;
                 @media screen and (min-width: $screen-tablet){
                     left: 0;
