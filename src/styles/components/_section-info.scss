@@ -55,9 +55,9 @@
     }
     &__list{
         list-style: none;
-        margin-right: 30px;
-        margin-left: 30px;
+        margin: 30px;
         @include flex(center, stretch, row);
+        flex-wrap: wrap;
         &-item{
             width: 45px;
             &:not(:last-child){
