@@ -1,11 +1,12 @@
 .footer{
     position: relative;
+    padding-top: 70px;
     &__container{
         @extend %container;
         @include flex(space-around, stretch, row);
+        flex-wrap: wrap;
     }
     &__logo{
-        position: absolute;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -26,8 +27,7 @@
     }
     &__wrapper{
         @include flex(start, stretch, column);
-        padding-top: 70px;
-        margin-bottom: 71px;
+        margin-bottom: 50px;
     }
     &__image{
         width: 17px;
@@ -46,7 +46,7 @@
             text-align: justify;
             line-height: 1.8;
             &--pos{
-                margin-top: 70px;
+                margin-top: 15px;
                 margin-right: 36px;
                 max-width: 287px;
             }
@@ -62,6 +62,10 @@
             text-transform: uppercase;
             margin-bottom: 42px;
             margin-top: 10px;
+            text-align: center;
+            @media screen and (min-width: $screen-desktop){
+                text-align: left;
+            }
         }
     }
     &__form{
@@ -110,7 +114,11 @@
     }
     &__aside{
         @extend %container;
-        @include flex(space-between, stretch, row);
+        @include flex(center, center, row);
+        flex-wrap: wrap;
+        @media screen and (min-width: 534px){
+            justify-content: space-between;
+        }margin: 0 auto;
         padding-bottom: 72px;
     }
     &__list{
@@ -119,6 +127,10 @@
         @include text($H50, 400, $white);
         text-transform: uppercase;
         max-width: 287px;
+        margin-bottom: 30px;
+        @media screen and (min-width: 534px){
+            margin-bottom: 0;
+        }
         &-item{
             &:not(:last-child){
                 margin-right: 30px;
