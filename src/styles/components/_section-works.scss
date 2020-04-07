@@ -14,43 +14,67 @@
         }
         &-wrapper{
             width: 10px;
+            z-index: -1;
         }
         &-icon{
             @include svg(10px, $text);
             transition: all 0.2s ease;
             cursor: pointer;
-            &:hover{
-                transform: translateX(5px);
+            @media screen and (min-width: $screen-tablet) {
+                &:hover{
+                    transform: translateX(5px);
+                }
             }
         }
     }
     &__container{
         width: 100%;
         margin-bottom: 35px;
+        padding: 0 10px;
+        @media screen and (max-width: $screen-tablet){
+            width: 100%;
+            height: 300px;
+            overflow-y: hidden;
+            overflow-x: auto;  
+        }
+         
         &-list{
             list-style: none;
             @include flex();
             flex-wrap: wrap;
+            background-color: #fff;
+            @media screen and (max-width: $screen-tablet){
+                @include flex(flex-start, flex-start, row);
+                flex-wrap: nowrap;
+                background-color: #251d45;
+            }
         }
         &-item{
             max-height: 400px;
-            max-width: 400px;
+            max-width: 380px;
         }
         &-image{
+            @media screen and (max-width: $screen-tablet){
+                max-width: 768;
+                height: 300px;
+            }
             @media screen and (min-width: $screen-desktop-large){
                 max-width: 269px;
                 max-height: 300px;
             }
             @media screen and (min-width: $screen-fullhd) {
-                max-width: 380px;
+                max-width: 375px;
                 height: 400px;
             }
             object-fit: cover;
             object-position:center center ;
             transition: all 0.2s ease;
-            &:hover{
-                transform: translateY(20px);
+            @media screen and (min-width: $screen-tablet) {
+                &:hover{
+                    transform: translateY(20px);
+                }
             }
+            
         }
     }
 }

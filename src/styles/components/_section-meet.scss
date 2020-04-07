@@ -54,6 +54,9 @@
         }
         &-wrapper{
             z-index: -1;
+            @media screen and (min-width: $screen-tablet) {
+                z-index: 10;
+            }
             max-height: 229px;
             margin-bottom: 22px;
         }
