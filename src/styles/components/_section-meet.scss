@@ -37,11 +37,14 @@
     }
     &__list{
         list-style: none;
-        width: 220px;
-        @include flex();
-        margin-bottom: 70px;
+        @include flex(center, center, row);
+        flex-wrap: wrap;
+        margin-bottom: 20px;
         &-item{
-            margin-right: 20px;
+            width: 222px;
+            @include flex(center, center, column);
+            margin-right: 10px;
+            margin-top: 20px;
             border: 1px solid $white;
             transition: all 0.2s ease;
             cursor: pointer;
@@ -51,16 +54,20 @@
         }
         &-wrapper{
             max-height: 229px;
+            margin-bottom: 22px;
         }
         &-image{
             margin-bottom: 23px;
-            max-height: 229px;
+            height: 229px;
             width: 220px;
             object-fit: cover;
             transition: all 0.5s ease;
             &:hover{
                 transform: scale(1.1);
                 border-radius: 20px;
+            }
+            &--position{
+                object-position: center 10%;
             }
         }
         &-subtitle{
