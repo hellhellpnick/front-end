@@ -34,27 +34,59 @@
             @include flex(center, center, column);
             padding-top: 20px;
             cursor: pointer;
-            &:hover svg{
-                fill: rgb(38, 28, 99); 
-            }
-            &:nth-child(2){
-                border-left: 1px solid rgba($text, 0.25);
-                border-bottom: 1px solid rgba($text, 0.25);
-            }
-            &:nth-child(3){
-                border-left: 1px solid rgba($text, 0.25);
-                border-bottom: 1px solid rgba($text, 0.25);
-            }
             &:nth-child(1){
                 border-bottom: 1px solid rgba($text, 0.25);
             }
+            &:nth-child(2){
+                border-bottom: 1px solid rgba($text, 0.25);
+            }                
+            &:nth-child(3){
+                border-bottom: 1px solid rgba($text, 0.25);
+            }
+            &:nth-child(4){
+                border-bottom: 1px solid rgba($text, 0.25);
+            }                
             &:nth-child(5){
-                border-left: 1px solid rgba($text, 0.25);
+                border-bottom: 1px solid rgba($text, 0.25);
             }
-            
-            &:nth-child(6){
-                border-left: 1px solid rgba($text, 0.25);
+            @media screen and (min-width: 637px){
+                &:nth-child(2){
+                    border-left: 1px solid rgba($text, 0.25);
+                    border-bottom: 1px solid rgba($text, 0.25);
+                }
+                &:nth-child(3){
+                    border-top: 1px solid rgba($text, 0.25);
+                    border-right: 1px solid rgba($text, 0.25);
+                    border-bottom: 1px solid rgba($text, 0.25);
+                }                
+                &:nth-child(6){
+                    border-top: 1px solid rgba($text, 0.25);
+                    border-left: 1px solid rgba($text, 0.25);
+                }
             }
+            @media screen and (min-width: 917px){
+                &:hover svg{
+                    fill: rgb(38, 28, 99); 
+                }
+                &:nth-child(2){
+                    border-left: 1px solid rgba($text, 0.25);
+                    border-bottom: 1px solid rgba($text, 0.25);
+                }
+                &:nth-child(3){
+                    border-left: 1px solid rgba($text, 0.25);
+                    border-bottom: 1px solid rgba($text, 0.25);
+                }
+                &:nth-child(1){
+                    border-bottom: 1px solid rgba($text, 0.25);
+                }
+                &:nth-child(5){
+                    border-left: 1px solid rgba($text, 0.25);
+                }
+                
+                &:nth-child(6){
+                    border-left: 1px solid rgba($text, 0.25);
+                }
+            }  
         }
         &-subtitle{
             @include text($H50, 700);
