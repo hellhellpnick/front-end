@@ -95,7 +95,18 @@
         &-button{
             padding: 10px 20px;
             background-color: $grey;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+            &:hover{
+                border-radius: 5px;
+                transform: scale(1.1);
+            }
         }     
+        &:valid &-button{
+            opacity: 1;
+            visibility: visible;
+        }
     }
     &__aside{
         @extend %container;
@@ -109,8 +120,7 @@
         text-transform: uppercase;
         max-width: 287px;
         &-item{
-            &:not(:last-child)
-            {
+            &:not(:last-child){
                 margin-right: 30px;
             }
         }
@@ -125,6 +135,7 @@
         width: 35px;
         margin-top: -35px;
         margin-right: 8px;
+        cursor: pointer;
         &-image{
             @include svg(35px, $white);
             transition: all 0.5s ease;
