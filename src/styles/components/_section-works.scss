@@ -1,5 +1,5 @@
 .section-works{
-    padding-bottom: 180px;
+    padding-bottom: 150px;
     &__our{
         margin-bottom: 71px;
         @extend %container;
@@ -26,6 +26,7 @@
     }
     &__container{
         width: 100%;
+        margin-bottom: 35px;
         &-list{
             list-style: none;
             @include flex();
