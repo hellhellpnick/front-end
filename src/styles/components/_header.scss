@@ -1,8 +1,11 @@
 .header{
     position: relative;
-    padding-top: 20px;
+    padding-top: 120px;
     padding-bottom: 207px;
     margin-bottom: 70px;
+    @media screen and (min-width: $screen-tablet){
+        padding-top: 20px;
+    }
     &__image{
         @extend %image-absolute;
     }
@@ -11,7 +14,6 @@
     }
 
     &__logo{
-        position: absolute;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -52,23 +54,81 @@
     }
 }
 .navigation{
-    &__list{
-        list-style: none;
-        @include flex(space-around, stretch, row);
-        margin-left: 248px;
-        padding-top: 20px;
-        margin-bottom: 183px;
-        &-item{
-            font-size: $H50;
-            text-transform: uppercase;
-            color: $white;
-            letter-spacing: 0.33;
-            font-weight: 800;
-            cursor: pointer;
+    position: fixed;
+    background-color: rgba(rgb(38, 28, 99),0.75);
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    padding: 0 10px;
+    height: 100px;
+    margin-bottom: 20px;
+    @include flex(space-between, center, row);
+    @media screen and (min-width: $screen-tablet){
+        position: static;
+        background-color: transparent;
+        margin-bottom: 120px;
+        padding: 0;
+        height: 60;
+    }
+}
+.nav{
+    &__fixed{
+        @include flex(space-between, center, row);
+        @media screen and (min-width: $screen-tablet){
+            justify-content: space-around;
+            padding: 25px 0;
         }
-        &-item:hover{
-            color: $btn-color;
-            transition: all 0.5s ease;
+        padding: 40px 10px;
+        z-index: 11;
+    }
+    &__list{
+        position: fixed;
+        @include flex(flex-start, center, column);
+        top: 100px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
+        @media screen and (min-width: $screen-tablet){
+            flex-direction: row;
+            position: static;
+            padding: 0;       
+        }
+        &-item{
+            @include text($H100, 700, $white);
+            @media screen and (min-width: $screen-fullhd) {
+                font-size: $H300;
+                padding: 0;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+                @media screen and (min-width: $screen-tablet){
+                    left: 0;
+                    margin-bottom: 0;
+                    margin-right: 32px;
+                    padding-bottom: 12px;
+                }
+            border-top: 3px solid transparent;
+            padding-top: 9px;
+            text-transform: uppercase;
+            @media screen and (min-width: $screen-tablet) {
+                &:hover{
+                    border-color: $btn-color;
+                    transition: all 0.2s ease;
+                }
+            }
+        } 
+        &-link{
+            padding: 24px;
+            @media screen and (min-width: $screen-tablet) {
+            padding: 0;
+            }
+            color: $white;
         }
     }
 }

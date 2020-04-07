@@ -128,13 +128,12 @@
 }
 .list{
     list-style: none;
-    @include flex(flex-end, stretch, row);
-    top: 220px;
-    right: 495px;
+    @include flex(flex-start, stretch, row);
     &__item{
         width: 35px;
         margin-top: -35px;
         margin-right: 8px;
+        padding: 20px 0;
         cursor: pointer;
         &-image{
             @include svg(35px, $white);

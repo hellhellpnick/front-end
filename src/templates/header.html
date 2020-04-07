@@ -1,23 +1,42 @@
 <header class="header">
     <span class="background"><img class="header__image" src="images/header.png" alt=""></span>
     <div class="header__container">
-        <nav class="navigation">
+        <div class="navigation">
             <div class="header__logo">
                 <span class="header_logo-image"><img src="images/tajem.png" alt="tajem"></span>
                 <h2 class="header__logo-text">tajam</h2>
             </div>
-            <div class="header__list">
-                <ul class="navigation__list">
-                    <li class="navigation__list-item">home</li>
-                    <li class="navigation__list-item">about</li>
-                    <li class="navigation__list-item">expertise</li>
-                    <li class="navigation__list-item">teams</li>
-                    <li class="navigation__list-item">works</li>
-                    <li class="navigation__list-item">people say</li>
-                    <li class="navigation__list-item">contact</li>
-                </ul>
-            </div>
-        </nav>
+            <nav class="nav__fixed">
+                <label class="burger header__burger">
+                    <input class="burger__input" type="checkbox">
+                    <span class="burger__box">
+                        <span class="burger__item"></span>
+                        <span class="burger__item"></span>
+                        <span class="burger__item"></span>
+                    </span>
+                    <span class="nav__list burger__menu">
+                        <span class="nav__list-item">
+                            <a class="nav__list-link" href="#home">home</a>
+                        </span>
+                        <span class="nav__list-item">
+                            <a class="nav__list-link" href="#about">about</a>
+                        </span>
+                        <span class="nav__list-item">
+                            <a class="nav__list-link" href="#expertise">expertise</a>
+                        </span>
+                        <span class="nav__list-item">
+                            <a class="nav__list-link" href="#teams">teams</a>
+                        </span>
+                        <span class="nav__list-item">
+                            <a class="nav__list-link" href="#works">works</a>
+                        </span>
+                        <span class="nav__list-item">
+                            <a class="nav__list-link" href="#people say">people say</a>
+                        </span>
+                    </span>
+                </label>
+            </nav>
+        </div>
         <h1 class="header__title">We Are Awesome Creative Agency</h1>
 
         <p class="header__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
