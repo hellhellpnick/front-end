@@ -53,10 +53,12 @@
             }
         }
         &-wrapper{
+            z-index: -1;
             max-height: 229px;
             margin-bottom: 22px;
         }
         &-image{
+            z-index: -1;
             margin-bottom: 23px;
             height: 229px;
             width: 220px;
