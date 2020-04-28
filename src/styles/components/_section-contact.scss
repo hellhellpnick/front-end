@@ -93,13 +93,11 @@
     &__list{
         max-width: 400px;
         list-style: none;
-        @include flex(center, center, row);
+        @include flex(space-around, center, row);
         flex-wrap: wrap;
-        @media screen and (min-width: $screen-tablet) {
-            justify-content:space-between;
-        }
         &-item{
             margin-bottom: 20px;
+            margin-right: 15px;
         }
         &-image{
             width: 162px;
